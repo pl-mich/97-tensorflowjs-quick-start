@@ -1,3 +1,5 @@
+Forked from Angular Firebase for TFJS starter app (BlueML)
+
 # Tensorflow.js MNIST Angular Demo
 
 Watch the [screencast](https://angularfirebase.com/lessons)
