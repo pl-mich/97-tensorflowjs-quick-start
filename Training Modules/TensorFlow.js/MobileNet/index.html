@@ -1,14 +1,67 @@
-<html>
+<!DOCTYPE html>
+
+<!-- Well, it seems that WebStorm is the fastest JetBrains IDE I have been
+using so far...-->
+<!--
+  In this codelab, you will learn how to build a simple "teachable machine",
+  a custom image classifier that you will train on the fly in the browser
+  using TensorFlow.js, a powerful and flexible machine learning library for
+  Javascript.
+
+  You will first load and run a popular pre-trained model called MobileNet
+  for image classification in the browser.
+  You will then use a technique called "transfer learning",
+  which bootstraps our training with the pre-trained MobileNet model
+  and customizes it to train for your application.
+-->
+
+<!-- Remember all those jargon! -->
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <title>MobileNet Image Classifier Training Module</title>
   <!-- Load the latest version of TensorFlow.js -->
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <!-- Load the MobileNet image classifying module -->
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+  <!-- Load a "K-Nearest Neighbors Classifier" -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
 </head>
+
+
 <body>
+
+<!-- Ironically, this is the first piece of HTML code that you wrote
+independently in a long while... Since sixth grade, actually. -->
+<div class="head">
+  <a href="https://codelabs.developers.google.com/codelabs/tensorflowjs-teachablemachine-codelab/index.html">
+    Original CodeLab page</a>
+</div>
+
+<!-- What is this supposed to do? -->
+<!-- As per the comments in the JavaScript file, this is NOT a real console,
+only a simple <div> to display the outputs from the MobileNet model -->
 <div id="console"></div>
+
 <!-- Add an image that we will use to test -->
-<img id="img" crossorigin src="https://i.imgur.com/JlUvsxa.jpg" width="227" height="227"/>
+<!-- Note that the image is cropped to square -->
+<!-- See how this 'id' property would come in handy in the JavaScript code? -->
+<!--<img id="img" crossorigin src="https://i.imgur.com/JlUvsxa.jpg" width="227" height="227"/>-->
+
+<!-- Retrieve image from the webcam -->
+<!-- However, this piece of HTML code would only play this video labelled
+'webcam'... You'd need extra JavaScript code to grab the actual webcam
+footage... -->
+<video autoplay playsinline muted id="webcam" width="224" height="224"></video>
+
+<!-- These buttons will be used to train the KNN model -->
+<button id="class-a">Add A</button>
+<button id="class-b">Add B</button>
+<button id="class-c">Add C</button>
+
 <!-- Load index.js after the content of the page -->
 <script src="index.js"></script>
+
 </body>
+
 </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<!--
+In this codelab, you will build an audio recognition network and
+use it to control a slider in the browser by making sounds.
+You will be using TensorFlow.js, a powerful and flexible machine learning
+library for Javascript.
+
+First, you will load and run a pre-trained model that can recognize
+20 speech commands. Then using your microphone, you will build and train
+a simple neural network that recognizes your sounds and makes the slider
+go left or right.
+
+Link to pre-trained model:
+https://github.com/tensorflow/tfjs-models/tree/master/speech-commands
+[I think I have already cloned this repository!]
+
+Original codelab link:
+https://codelabs.developers.google.com/codelabs/tensorflowjs-audio-codelab/index.html
+-->
+
+<html lang="en">
+<!-- Refer to the index.html file on the MobileNet applet for references to
+all these jargon! -->
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Recognition Training Module</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands"></script>
+</head>
+
+<body>
+  <div id="console"></div>
+  <script src="index.js"></script>
+
+  <!--
+   We've added three buttons to our UI labeled "Left", "Right", and "Noise",
+   corresponding to the three commands we want our model to recognize.
+   Pressing these buttons calls our newly added collect() function,
+   which creates training examples for our model.
+  -->
+  <!--
+   Collect "onmousedown," and stop collecting "onmouseup"
+   See how we call a JavaScript function by referencing to a string,
+   out of all things?
+  -->
+  <button id="left" onmousedown="collect(0)" onmouseup="collect(null)">Left</button>
+  <button id="right" onmousedown="collect(1)" onmouseup="collect(null)">Right</button>
+  <button id="noise" onmousedown="collect(2)" onmouseup="collect(null)">Noise</button>
+
+  <br/><br/>
+  <button id="train" onclick="train()">Train</button>
+
+  <br/><br/>
+  <button id="listen" onclick="listen()">Listen</button>
+  <input type="range" id="output" min="0" max="10" step="0.1">
+</body>
+
+</html>

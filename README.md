@@ -8,8 +8,9 @@
 
 - [ ] Go through the TensorFlow.JS training modules
 - [ ] Go through the TensorBoard training modules
-- [ ] Build a Fashion MNIST image classifying module OR grab an existing 
-  image classification module from the repository 
+- [ ] Build a Fashion MNIST image classifying module OR 
+- [ ] Build off the MobileNet image classifying module OR
+- [ ] Adopt some other model from 
   [tensorflow/tfjsmodels](https://github.com/tensorflow/tfjs-models)
 - [ ] Construct a TensorBoard logging applet out of it
 - [ ] Publish the applet through [TensorBoard.dev]
