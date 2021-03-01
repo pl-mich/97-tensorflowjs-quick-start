@@ -16,6 +16,8 @@
 
 ## For the Next Few Months...
 
+- [ ] Go through source code of [tensorflow/tfjsmodels](https://github.com/tensorflow/tfjs-models)
+  and Google Teachable Machine
 - [ ] Find out ways to embed TensorBoard.dev visualizations into webpages
 - [ ] Any chance of manually writing the TensorFlow log files from 
   preexisting data? 
