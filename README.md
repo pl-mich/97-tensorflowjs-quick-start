@@ -2,7 +2,10 @@
 
 # "TRUST THE PLAN"
 
+> Do I sound like I believe in QAnon bullshit? Hello, FBI. I never did.
+
 ## Short-term Goals
+
 - [ ] Go through the TensorFlow.JS training modules
 - [ ] Go through the TensorBoard training modules
 - [ ] Build a Fashion MNIST image classifying module OR grab an existing 
@@ -12,6 +15,7 @@
 - [ ] Publish the applet through [TensorBoard.dev]
 
 ## For the Next Few Months...
+
 - [ ] Find out ways to embed TensorBoard.dev visualizations into webpages
 - [ ] Any chance of manually writing the TensorFlow log files from 
   preexisting data? 
@@ -35,6 +39,7 @@
 - [https://js.tensorflow.org/](https://js.tensorflow.org/)
 - [Fireship Tutorial](https://fireship.io/lessons/tensorflow-js-quick-start/)  
 - [freeCodeCamp.org video tutorial](https://www.youtube.com/watch?v=EoYfa6mYOG4)
+- [Converting an existing Keras model into a TensorFlow.js model](https://www.tensorflow.org/js/tutorials/conversion/import_keras)
 
 ### Convolutional Neural Networks
 
